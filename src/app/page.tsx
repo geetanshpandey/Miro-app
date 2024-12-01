@@ -38,19 +38,19 @@ const Home = () => {
           {/* Add Button */}
           <Button
             onClick={handleAddBox}
-            className="flex bg-blue-500 text-white"
+            className="flex bg-blue-500 text-white p-10 "
           >
             Add
           </Button>
         </div>
 
         {/* Render Boxes in a Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-8 gap-x-40">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-8 gap-x-48 -mt-24 ml-12">
           {boxes.map((box) => (
             <div
               key={box.id}
               onClick={() => handleBoxClick(box.id)}
-              className="cursor-pointer p-4 w-32 border rounded-lg shadow-lg bg-blue-100 hover:bg-gray-200 transition"
+              className="cursor-pointer p-4 h-40 w-40 border rounded-lg shadow-lg bg-blue-100 hover:bg-gray-200 transition"
             >
               <h2 className="font-bold text-lg">{box.name}</h2>
               <p className="text-sm text-gray-600">{box.date}</p>
